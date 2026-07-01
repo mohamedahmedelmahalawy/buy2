@@ -10,6 +10,7 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -18,11 +19,13 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
+
   --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -39,6 +42,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -46,6 +50,40 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Custom colors */
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+
+  --color-error: var(--error);
+  --color-error-foreground: var(--error-foreground);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-neutral: var(--neutral);
+  --color-neutral-foreground: var(--neutral-foreground);
+
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+
+  --color-light: var(--light);
+  --color-light-foreground: var(--light-foreground);
+
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+
+  /* Custom gradients */
+  --background-image-gradient-success: var(--gradient-success);
+  --background-image-gradient-orange: var(--gradient-orange);
+  --background-image-gradient-error: var(--gradient-error);
+  --background-image-gradient-amber: var(--gradient-amber);
+  --background-image-gradient-pink: var(--gradient-pink);
+  --background-image-gradient-gray: var(--gradient-gray);
+  --background-image-gradient-blue: var(--gradient-blue);
+
+  /* Custom shadows */
+  --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 25%);
 }
 
 :root {
@@ -67,12 +105,15 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
+
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
+
   --radius: 0.625rem;
+
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -81,6 +122,32 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Custom colors */
+  --brand: #234199;
+  --error: #ff0001;
+  --success: #118224;
+  --neutral: #c8cad8;
+  --highlight: #f9f252;
+  --light: #e2e2e2;
+  --gold: #fbcb18;
+
+  --brand-foreground: #ffffff;
+  --error-foreground: #ffffff;
+  --success-foreground: #ffffff;
+  --neutral-foreground: #000000;
+  --highlight-foreground: #000000;
+  --light-foreground: #000000;
+  --gold-foreground: #000000;
+
+  /* Custom gradients */
+  --gradient-success: linear-gradient(90deg, #118224 0%, #d6eeda 100%);
+  --gradient-orange: linear-gradient(90deg, #ff9900 0%, #ffde82 100%);
+  --gradient-error: linear-gradient(90deg, #ff0001 0%, #ff9697 100%);
+  --gradient-amber: linear-gradient(90deg, #ff9900 0%, #ffd478 100%);
+  --gradient-pink: linear-gradient(90deg, #e31082 0%, #ff95d4 100%);
+  --gradient-gray: linear-gradient(90deg, #525252 0%, #b8b8b8 100%);
+  --gradient-blue: linear-gradient(90deg, #0247d0 0%, #8da9fb 100%);
 }
 
 .dark {
@@ -102,11 +169,13 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
+
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
+
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
@@ -121,9 +190,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
