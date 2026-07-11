@@ -72,6 +72,9 @@
   --color-gold: var(--gold);
   --color-gold-foreground: var(--gold-foreground);
 
+  --color-inactive: var(--inactive);
+  --color-inactive-foreground: var(--inactive-foreground);
+
   /* Custom gradients */
   --background-image-gradient-success: var(--gradient-success);
   --background-image-gradient-orange: var(--gradient-orange);
@@ -129,12 +132,14 @@
   --neutral: #c8cad8;
   --highlight: #f9f252;
   --light: #e2e2e2;
+  --inactive: #b0b0b0;
 
   --gold: #fbcb18;
 
   --brand-foreground: #ffffff;
   --error-foreground: #ffffff;
   --success-foreground: #ffffff;
+  --inactive-foreground: #000000;
   --neutral-foreground: #000000;
   --highlight-foreground: #000000;
   --light-foreground: #000000;

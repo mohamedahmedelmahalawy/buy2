@@ -1,3 +1,9 @@
+import HeaderInfo from "@/components/others/HeaderInfo";
+
 export default function page() {
-  return <div>page</div>;
+  return (
+    <main>
+      <HeaderInfo />
+    </main>
+  );
 }

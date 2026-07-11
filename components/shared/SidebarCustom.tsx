@@ -29,7 +29,10 @@ const sideBarList = [
 export default function SidebarCustom() {
   const pathname = usePathname();
   return (
-    <Sidebar className="m-6 h-[calc(100vh-48px)] rounded-lg bg-white data-[mobile=true]:m-0 border-none shadow-sm shadow-shadow-card">
+    <Sidebar
+      variant="inset"
+      className="m-6 h-[calc(100vh-48px)] rounded-lg bg-white data-[mobile=true]:m-0 border-none shadow-sm shadow-shadow-card"
+    >
       <SidebarHeader>
         <Link href={"/"}>
           <Image
