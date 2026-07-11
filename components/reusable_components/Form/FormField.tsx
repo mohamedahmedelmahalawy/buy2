@@ -36,7 +36,7 @@ export default function FormField({
             placeholder={placeholder}
             {...register}
             aria-invalid={!!error}
-            className="w-full rounded-md border bg-white px-3 py-2 text-black focus:outline-none"
+            className={`w-full rounded-md  bg-white px-3 py-2 text-black focus:outline-none`}
           />
         ) : (
           <input
@@ -45,7 +45,7 @@ export default function FormField({
             placeholder={placeholder}
             {...register}
             aria-invalid={!!error}
-            className="w-full h-13 rounded-md border bg-white px-3 py-2 text-black focus:outline-none"
+            className={`w-full h-13 rounded-md border ${error ? "border-red-500" : "border-gray-300"} bg-white px-3 py-2 text-black focus:outline-none`}
           />
         )}
 

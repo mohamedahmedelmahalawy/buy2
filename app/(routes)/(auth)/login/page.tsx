@@ -1,20 +1,18 @@
 "use client";
-
-import { useTranslations } from "next-intl";
+//lib
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-
-import FormField from "@/components/reusable_components/FormField";
+//components
+import FormField from "@/components/reusable_components/Form/FormField";
 import { Button } from "@/components/ui/button";
-
+//validations
 import { createLoginSchema } from "@/lib/validations/login.schema";
+//next
 import Link from "next/link";
 //-----------------------
 export default function LoginPage() {
-  const t = useTranslations("LoginPage");
-
-  const schema = createLoginSchema(t);
+  const schema = createLoginSchema();
 
   type FormData = z.infer<typeof schema>;
 
@@ -31,52 +29,46 @@ export default function LoginPage() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-         className="space-y-4 w-full"
-    >
-      <div className="text-center mt-2 mb-15">
-        <h1 className="text-xl md:text-3xl font-bold">{t("title")}</h1>
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 w-full">
+      <div className="w-full text-center mt-2 mb-15 mt-[50px]">
+        <h1 className="text-xl md:text-4xl font-bold mb-2">Welcome!</h1>
+        <p className="text-md md:text-lg text-muted-foreground mt-2">
+         Please login to continue 
+          </p>
       </div>
-
       <FormField
-        id="identifier"
-        label={t("identifier")}
-        placeholder={t("identifierPlaceholder")}
+        id="email"
+        label="Email Address"
+        placeholder="Enter your email address"
         register={register("identifier")}
         error={errors.identifier?.message}
       />
 
       <FormField
         id="password"
-        label={t("password")}
+        label="Password"
         type="password"
-        placeholder={t("passwordPlaceholder")}
+        placeholder="Enter your password"
         register={register("password")}
         error={errors.password?.message}
       />
+      <div className="w-full flex justify-between mt-2">
+
       <Link href="/forgot-password">
         <p className="text-sm text-blue-600 hover:underline">
-          {t("forgotPassword")}
+          Forgot Password?
         </p>
       </Link>
-     <div className="w-full flex justify-around gap-2 mt-7">
-  <Button
-    type="submit"
-    disabled={isSubmitting}
-    className="w-[50%] h-12 rounded-lg bg-secondary text-md text-white transition-colors duration-300 hover:bg-secondary/90"
-  >
-    {t("submit")}
-  </Button>
-
-  <Link
-    href="/register"
-    className="w-[50%] h-12 flex justify-center items-center  ">
-   <span className="w-full h-full text-sm md:text-md font-medium border border-secondary text-secondary hover:text-secondary/70 hover:border-secondary/70  flex items-center justify-center rounded-lg transition-colors duration-300">
-     {t("register")}
-    </span>
-  </Link>
-</div>
+      </div>
+      <div className="w-full flex mt-7">
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full h-14 rounded-xl bg-brand text-md text-white transition-colors duration-300 hover:bg-brand/90"
+        >
+          Log In
+        </Button>
+      </div>
     </form>
   );
 }

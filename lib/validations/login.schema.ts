@@ -1,18 +1,18 @@
 import { z } from "zod";
-
-export const createLoginSchema = (t: (key: string) => string) =>
+//-----------------------
+export const createLoginSchema = () =>
   z.object({
     identifier: z.string().refine(
       (value) =>
         /^[0-9]{11}$/.test(value) ||
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
       {
-        message: t("invalidIdentifier"),
+        message:("The email address you provided is not registed") ,
       }
     ),
 
     password: z.string().min(6, {
-      message: t("passwordMin"),
+      message: ("Password entered is incorrect"),
     }),
   });
 
