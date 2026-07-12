@@ -1,5 +1,5 @@
-import CurrentDateAndTime from "./dashboard/CurrentDateAndTime";
-import Greeting from "./dashboard/Greeting";
+import CurrentDateAndTime from "./CurrentDateAndTime";
+import Greeting from "./Greeting";
 
 export default function HeaderInfo() {
   return (

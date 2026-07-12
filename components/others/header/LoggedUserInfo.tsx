@@ -1,5 +1,5 @@
 import { Bell } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "../../ui/avatar";
 import { Icon } from "@iconify-icon/react";
 
 export default function LoggedUserInfo() {
