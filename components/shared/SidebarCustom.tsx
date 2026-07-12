@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 const sideBarList = [
-  { name: "Dashboard", icon: "ep:menu", link: "/" },
+  { name: "Dashboard", icon: "ep:menu", link: "/dashboard" },
   { name: "My Tasks", icon: "hugeicons:task-01", link: "/tasks" },
   { name: "Lists", icon: "simple-line-icons:list", link: "/lists" },
   { name: "Attendance", icon: "uil:calendar", link: "/attendance" },
@@ -34,7 +34,7 @@ export default function SidebarCustom() {
       className="m-6 h-[calc(100vh-48px)] rounded-lg bg-white data-[mobile=true]:m-0 border-none shadow-sm shadow-shadow-card"
     >
       <SidebarHeader>
-        <Link href={"/"}>
+        <Link href={"/dashboard"}>
           <Image
             src="/logo.svg"
             alt="logo"

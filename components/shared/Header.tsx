@@ -1,5 +1,5 @@
-import LoggedUserInfo from "../others/LoggedUserInfo";
-import { Search } from "../others/Search";
+import LoggedUserInfo from "../others/header/LoggedUserInfo";
+import { Search } from "../others/header/Search";
 
 export default function Header() {
   return (

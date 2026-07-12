@@ -1,9 +1,5 @@
-import HeaderInfo from "@/components/others/HeaderInfo";
+import HeaderInfo from "@/components/others/dashboard/HeaderInfo";
 
 export default function page() {
-  return (
-    <main>
-      <HeaderInfo />
-    </main>
-  );
+  return <main>main Page</main>;
 }
