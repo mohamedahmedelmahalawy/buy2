@@ -1,11 +1,9 @@
 //---------------------------
-export default function FormBannner() {
+export default function FormBanner() {
   return (
-    <div className=" w-full lg:w-153.5 max-w-153.5 h-full max-h-260 bg-brand rounded-[24px] overflow-hidden">
-      <div
-        className="absolute w-full max-w-275.5  max-h-275.5 rounded-full border-80 border-white/30"
-      >
-
+    <div className=" w-full max-w-153.5 h-full bg-brand rounded-[24px] px-10 py-10.5 ">
+      <div className="w-full h-full bg-white/15 rounded-[16px] border-white/30 border">
+      <Avater />
       </div>
     </div>
   );
