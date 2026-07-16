@@ -7,8 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins);
   --font-heading: var(--font-sans);
 
   --color-sidebar-ring: var(--sidebar-ring);
@@ -73,6 +72,9 @@
   --color-gold: var(--gold);
   --color-gold-foreground: var(--gold-foreground);
 
+  --color-inactive: var(--inactive);
+  --color-inactive-foreground: var(--inactive-foreground);
+
   /* Custom gradients */
   --background-image-gradient-success: var(--gradient-success);
   --background-image-gradient-orange: var(--gradient-orange);
@@ -114,8 +116,8 @@
 
   --radius: 0.625rem;
 
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #111827;
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
@@ -130,11 +132,14 @@
   --neutral: #c8cad8;
   --highlight: #f9f252;
   --light: #e2e2e2;
+  --inactive: #b0b0b0;
+
   --gold: #fbcb18;
 
   --brand-foreground: #ffffff;
   --error-foreground: #ffffff;
   --success-foreground: #ffffff;
+  --inactive-foreground: #000000;
   --neutral-foreground: #000000;
   --highlight-foreground: #000000;
   --light-foreground: #000000;
