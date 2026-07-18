@@ -1,24 +1,13 @@
-import { Icon } from "@iconify/react";
+//Next
 import Image from "next/image";
+//Icons
+import { Icon } from "@iconify/react";
 import AchievementBadge from "@/public/icons/reward.png";
-interface User {
-  name: string;
-  email: string;
-  image?: string | null;
-  role: string;
-  phoneNumber: string;
-  totapoints: number;
-}
+//Data
+import { user } from "../Data";
 
+//-----------------------------------
 const UserInfo = () => {
-  const user: User = {
-    name: "Amr Mater",
-    email: "AmrMater@example.com",
-    image: "",
-    role: "flutter developer",
-    phoneNumber: "(+989) 099943232555",
-    totapoints: 1000,
-  };
   const userInfo: { label: string; value: string }[] = [
     { label: "Role", value: user.role },
     { label: "Phone number", value: user.phoneNumber },
@@ -26,7 +15,8 @@ const UserInfo = () => {
   ];
 
   return (
-    <div className="flex items-center justify-between rounded-[24px] p-6 bg-white">
+    <div>
+      <div className="flex items-center justify-between rounded-[24px] p-6 bg-white">
       <div className="flex gap-4">
         {/* User Avatar */}
         {user.image ? (
@@ -70,14 +60,17 @@ const UserInfo = () => {
             height={24}
           />
         </div>
+        {/* User Total Points */}
         <div>
           <p className="text-[14px]">Total Points</p>
           <p className="text-[18px] text-[#756EF3] font-semibold">
-            {user.totapoints}
+            {user.totalPoints}
           </p>
         </div>
+      </div>
       </div>
     </div>
   );
 };
+
 export default UserInfo;
