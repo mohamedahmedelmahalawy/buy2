@@ -25,8 +25,6 @@ export default function LoginPage() {
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     console.log(data);
-
-
   };
 
   return (
@@ -51,41 +49,23 @@ export default function LoginPage() {
         error={errors.identifier?.message}
         autoComplete="username"
       />
-      {/* Password */}
-      <FormField
-        id="password"
-        label="Password"
-        type="password"
-        placeholder="Enter your password"
-        register={register("password")}
-        error={errors.password?.message}
-        autoComplete="current-password"
-      />
-      {/* Remember Me & Forgot Password */}
-      <div className="flex items-center justify-between">
-        <label htmlFor="rememberMe" className="flex items-center gap-2 text-sm">
-          <input
-            id="rememberMe"
-            type="checkbox"
-            className="h-4 w-4 rounded border-gray-300"
-          />
 
-          <span className="text-muted-foreground ">Remember me</span>
-        </label>
-        <Link
-          href="/forgot-password"
-          className="text-sm text-[#756EF3] transition hover:underline"
+      {/* Submit Button */}
+      <div className="mt-7 flex flex-col">
+        <Button
+          disabled={isSubmitting}
+          className="h-14 w-full rounded-[16px] bg-brand text-md text-white transition-colors hover:backdro"
         >
-          Forgot Password?
+          {isSubmitting ? "Logging in..." : "Log In"}
+        </Button>
+        {/* Back Button */}
+        <Link
+          href="/login"
+          className="h-14 w-full flex items-center justify-center rounded-[16px] border border-brand bg-white text-md text-brand transition-colors hover:bg-black/5"
+        >
+            Back
         </Link>
       </div>
-      {/* Submit button */}
-      <Button
-        disabled={isSubmitting}
-        className="mt-7 h-14 w-full rounded-xl bg-brand text-md text-white transition-colors hover:bg-brand/90"
-      >
-        {isSubmitting ? "Logging in..." : "Log In"}
-      </Button>
     </form>
   );
 }
