@@ -7,5 +7,6 @@ export default function Profile() {
       <UserInfo />
       <Rewards />
     </div>
+
   )
 }
