@@ -1,5 +1,6 @@
 //Types
 import { iUser } from "../profile/Types";
+import {iMetricData} from "../profile/Types"
 //-----------------------------------
 export const user: iUser = {
   name: "Amr Mater",
@@ -107,3 +108,19 @@ export const user: iUser = {
   },
 ]
 };
+
+export const MetricData: iMetricData[] = [
+  { name: "Metric 1", value: 65 },
+  { name: "Metric 2", value: 78 },
+  { name: "Metric 3", value: 42 },
+  { name: "Metric 4", value: 42 },
+  { name: "Metric 5", value: 42 },
+];
+
+export const MetricCOLORS: string[] = [
+  "#F97316",
+  "#FF0000",
+  "#C026D3",
+  "#FACC15",
+  "#F4A019",
+];

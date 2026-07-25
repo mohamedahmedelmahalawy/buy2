@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 import AchievementBadge from "@/public/icons/reward.png";
 //Data
-import { user } from "../Data";
+import { user } from "./Data";
 
 //-----------------------------------
 const UserInfo = () => {

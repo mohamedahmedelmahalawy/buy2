@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 //types
-import { iCoupon } from "../Types";
+import { iCoupon } from "./Types";
 //Data
-import { user } from "../Data";
+import { user } from "./Data";
 // Rewards icons
 import NetflexLogo from "@/public/Rewards/Netflex-logo.png";
 import AmazonLogo from "@/public/Rewards/Amazon-logo.png";

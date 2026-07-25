@@ -1,4 +1,4 @@
-//types
+//types for profile [User info]
 export interface iUser {
   name: string;
   email: string;
@@ -13,4 +13,14 @@ export interface iCoupon {
   title: string;
   code: string;
   discount: number;
+}
+
+//types for performance Scetion [Metrics]
+export interface iPerformanceSectionProps {
+  value: iMetricData[];
+  colors: string[];
+}
+export interface iMetricData {
+  name: string;
+  value: number;
 }
