@@ -1,9 +1,9 @@
 //interfaces&types
-import { iPerformanceSectionProps } from "../Types";
+import { iPerformanceSectionProps } from "../../../../types/UserTypes";
 //--------------------
 export const MetricSection = ({ value, colors }: iPerformanceSectionProps) => {
   return (
-    <div className="w-full flex flex-row justify-around" >
+    <div className="w-full flex flex-row justify-around">
       {value.map((entry, index) => (
         <div key={entry.name} className="flex flex-col justify-between my-2">
           <div
@@ -17,4 +17,3 @@ export const MetricSection = ({ value, colors }: iPerformanceSectionProps) => {
     </div>
   );
 };
-

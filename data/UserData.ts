@@ -1,6 +1,6 @@
 //Types
-import { iUser } from "../profile/Types";
-import {iMetricData} from "../profile/Types"
+import { iUser } from "../types/UserTypes";
+import {iMetricData} from "../types/UserTypes"
 //-----------------------------------
 export const user: iUser = {
   name: "Amr Mater",

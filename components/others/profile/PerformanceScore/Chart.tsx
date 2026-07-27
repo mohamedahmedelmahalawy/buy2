@@ -1,6 +1,6 @@
 "use client";
 //interfaces&types
-import {iPerformanceSectionProps} from "../Types"
+import { iPerformanceSectionProps } from "../../../../types/UserTypes";
 //libraries
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 //-----------------------------------
@@ -12,12 +12,7 @@ export default function PerformanceChart({
     <div className="h-65 my-6">
       <ResponsiveContainer>
         <PieChart>
-          <Pie
-            data={value}
-            dataKey="value"
-            outerRadius={125}
-            paddingAngle={1}
-          >
+          <Pie data={value} dataKey="value" outerRadius={125} paddingAngle={1}>
             {value.map((entry, index) => (
               <Cell key={entry.name} fill={colors[index]} />
             ))}
