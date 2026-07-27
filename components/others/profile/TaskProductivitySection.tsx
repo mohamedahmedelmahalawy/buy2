@@ -1,14 +1,18 @@
 import StatsCard from "@/components/reusable_components/StatsCard/StatsCard";
+import TimeFilter from "./TimeFilter";
 
 export default function TaskProductivitySection() {
   return (
     <div className="w-full h-fit flex flex-col gap-4 rounded-[24px] p-6 bg-white">
       {/* Header */}
-      <div className="flex flex-col">
-        <h2 className="text-[16px] font-semibold">Task Productivity</h2>
-        <p className="text-[10px] font-normal text-muted-foreground">
-          Task Productivity analized during the month.
-        </p>
+      <div className="flex items-center justify-between">
+        <div className="flex flex-col">
+          <h2 className="text-[16px] font-semibold">Task Productivity</h2>
+          <p className="text-[10px] font-normal text-muted-foreground">
+            Task Productivity analized during the month.
+          </p>
+        </div>
+        <TimeFilter />
       </div>
       {/* Stats Card Section  */}
 
@@ -26,8 +30,8 @@ export default function TaskProductivitySection() {
           value={90}
           progress={90}
           max={100}
-           leftLabel="0 Tasks"
-        rightLabel="100 Tasks"
+          leftLabel="0 Tasks"
+          rightLabel="100 Tasks"
         />
 
         {/* title card */}

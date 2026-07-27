@@ -1,14 +1,18 @@
 import StatsCard from "@/components/reusable_components/StatsCard/StatsCard";
+import TimeFilter from "./TimeFilter";
 
 export default function AttendanceSectioin() {
   return (
     <div className="w-full h-fit  flex flex-col gap-4 rounded-[24px] p-6 bg-white">
       {/* Header */}
+      <div className="flex items-center justify-between">
       <div className="flex flex-col ">
         <h2 className="text-[16px] font-semibold">Attendance</h2>
         <p className="text-[10px] font-normal text-muted-foreground">
           Attendance history analized during the month.
         </p>
+      </div>
+      <TimeFilter />
       </div>
       {/* Stats Card Section  */}
       <div className="grid grid-cols-2 gap-3">
