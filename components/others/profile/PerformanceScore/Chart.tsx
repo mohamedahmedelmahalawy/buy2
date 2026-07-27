@@ -9,10 +9,10 @@ export default function PerformanceChart({
   colors,
 }: iPerformanceSectionProps) {
   return (
-    <div className="h-65 my-6">
+    <div className="h-75 my-6">
       <ResponsiveContainer>
         <PieChart>
-          <Pie data={value} dataKey="value" outerRadius={125} paddingAngle={1}>
+          <Pie data={value} dataKey="value" outerRadius={130} paddingAngle={1}>
             {value.map((entry, index) => (
               <Cell key={entry.name} fill={colors[index]} />
             ))}

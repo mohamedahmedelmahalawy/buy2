@@ -7,7 +7,7 @@ import PerformanceScore from "./PerformanceScore";
 //-----------------------------------
 export default function PerformanceSection() {
   return (
-    <div className="max-w-115 w-full rounded-[24px] p-6 bg-white">
+    <div className="max-w-115 w-full flex flex-col justify-between rounded-[24px] p-6 bg-white">
       <div>
         <h1 className="text-[16px] text-black">Performance</h1>
         <p className="text-[10px] text-[#B0B0B0]">

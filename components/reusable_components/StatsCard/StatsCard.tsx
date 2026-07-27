@@ -22,8 +22,8 @@ export default function StatsCard({
   variant,
 }: StatsCardProps) {
   return (
-    <div className="rounded-[12px] border border-gray-200 bg-white p-5">
-      <div className="mb-6 flex items-center justify-between">
+    <div className="rounded-[12px] border border-gray-200 bg-white p-3">
+      <div className="mb-5.75 flex items-center justify-between">
         <h3 className="text-sm text-gray-500">{title}</h3>
         <span className="text-xl font-semibold">{value}</span>
       </div>

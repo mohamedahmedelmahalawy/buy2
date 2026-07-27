@@ -2,16 +2,16 @@ import StatsCard from "@/components/reusable_components/StatsCard/StatsCard";
 
 export default function AttendanceSectioin() {
   return (
-    <div className="w-full h-fit flex flex-col gap-4 rounded-[24px] p-6 bg-white">
+    <div className="w-full h-fit  flex flex-col gap-4 rounded-[24px] p-6 bg-white">
       {/* Header */}
-      <div className="flex flex-col gap-2 mb-6">
+      <div className="flex flex-col ">
         <h2 className="text-[16px] font-semibold">Attendance</h2>
         <p className="text-[10px] font-normal text-muted-foreground">
           Attendance history analized during the month.
         </p>
       </div>
       {/* Stats Card Section  */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-3">
         <StatsCard
           title="Attendance Rate"
           value="42%"
