@@ -1,6 +1,7 @@
 import { Bell } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../../ui/avatar";
 import { Icon } from "@iconify-icon/react";
+import Link from "next/link";
 
 export default function LoggedUserInfo() {
   return (
@@ -16,7 +17,9 @@ export default function LoggedUserInfo() {
         </Avatar>
 
         <div>
-          <p className="text-[1.125rem] font-semibold">Mohamed Ahmed</p>
+          <Link href="/profile">
+            <p className="text-[1.125rem] font-semibold">Mohamed Ahmed</p>
+          </Link>
           <p className="text-[0.875rem] text-muted-foreground">
             Flutter Developer
           </p>
