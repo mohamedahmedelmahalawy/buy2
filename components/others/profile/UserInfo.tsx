@@ -5,6 +5,8 @@ import { Icon } from "@iconify/react";
 import AchievementBadge from "@/public/icons/reward.png";
 //Data
 import { user } from "../../../data/UserData";
+import { UserDetailsSheet } from "./Drawer/DrawerProfile";
+
 
 //-----------------------------------
 const UserInfo = () => {
@@ -35,7 +37,7 @@ const UserInfo = () => {
             {/* User name */}
             <div className="flex w-fit h-fit items-center gap-4">
               <p className="text-[18px] font-semibold">{user.name}</p>
-              <span className="text-[#756EF3] text-[12px]">Full Info</span>
+              <UserDetailsSheet />
             </div>
             {/* User Info Section */}
             <div className="flex flex-row gap-14">
