@@ -6,7 +6,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import InfoCard from "./InfoCard";
-
+//--------------------------
 export function UserDetailsSheet() {
   return (
     <Sheet>
@@ -16,10 +16,7 @@ export function UserDetailsSheet() {
 
       <SheetContent side="right" className=" h-auto w-96 rounded-2xl p-">
         <SheetHeader>
-          <SheetTitle
-            className="text-[18px] font-semibold"
-            style={{ border: "1px solid orange" }}
-          >
+          <SheetTitle className="text-[18px] font-semibold">
             More details
           </SheetTitle>
         </SheetHeader>

@@ -6,6 +6,7 @@ import AchievementBadge from "@/public/icons/reward.png";
 //Data
 import { user } from "../../../data/UserData";
 import { UserDetailsSheet } from "./Drawer/DrawerProfile";
+import UserAvatar from "./UserAvatar";
 
 
 //-----------------------------------
@@ -20,8 +21,11 @@ const UserInfo = () => {
     <div>
       <div className="flex items-center justify-between rounded-[24px] p-6 bg-white">
         <div className="flex gap-4">
+          <div className="bg-[#EAF2FF] w-fit flex items-end rounded-[20px]">
+          <UserAvatar userImage={user.image}  userName={user.name}/>
+          </div>
           {/* User Avatar */}
-          {user.image ? (
+          {/* {user.image ? (
             <Image src={user.image} alt={user.name} width={80} height={80} />
           ) : (
             <div className="bg-[#EAF2FF] w-fit flex items-end  rounded-[20px]">
@@ -31,8 +35,8 @@ const UserInfo = () => {
                 height={80}
                 color="#B4DBFF"
               />
-            </div>
-          )}
+            </div> */}
+          {/* )} */}
           <div className="flex flex-col gap-2.75">
             {/* User name */}
             <div className="flex w-fit h-fit items-center gap-4">
