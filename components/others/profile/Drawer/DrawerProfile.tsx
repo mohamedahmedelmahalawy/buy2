@@ -5,7 +5,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import InfoCard from "./InfoCard";
+import InfoSection from "./InfoSection";
 
 export function UserDetailsSheet() {
   return (
@@ -14,18 +14,18 @@ export function UserDetailsSheet() {
         Full Info
       </SheetTrigger>
 
-      <SheetContent side="right" className=" h-auto w-96 rounded-2xl p-">
+      <SheetContent side="right" className=" h-auto w-96 rounded-2xl ">
         <SheetHeader>
           <SheetTitle
             className="text-[18px] font-semibold"
-            style={{ border: "1px solid orange" }}
           >
             More details
           </SheetTitle>
         </SheetHeader>
 
         <div className="mt-6 overflow-y-auto">
-          <InfoCard
+          
+          <InfoSection
             icon="ant-design:phone-outlined"
             label="Phone"
             value="123456789"
@@ -35,3 +35,5 @@ export function UserDetailsSheet() {
     </Sheet>
   );
 }
+
+

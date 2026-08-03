@@ -41,12 +41,9 @@ function CouponCard({ coupon }: { coupon: iCoupon }) {
     <div className="w-18.25 h-16.75 flex items-center justify-center p-1.75 bg-gray-100 rounded-lg shrink-0">
       <Image
         src={
-          coupon.title === "Amazon"
-            ? AmazonLogo
-            : coupon.title === "Netflix"
-              ? NetflexLogo
-              : coupon.title === "Spotify"
-                ? SpotifyLogo
+          coupon.title === "Amazon" ? AmazonLogo
+            : coupon.title === "Netflix" ? NetflexLogo
+              : coupon.title === "Spotify"  ? SpotifyLogo
                 : WaffarhaLogo
         }
         alt={coupon.title}

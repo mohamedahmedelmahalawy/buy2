@@ -6,7 +6,7 @@ interface InfoCardProps {
   value: string;
 }
 
-export default function InfoCard({
+export default function InfoSection({
   icon,
   label,
   value,
