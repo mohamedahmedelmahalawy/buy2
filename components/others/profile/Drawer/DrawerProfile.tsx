@@ -5,6 +5,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
 import InfoSection from "./InfoSection";
 
 export function UserDetailsSheet() {
@@ -16,15 +17,12 @@ export function UserDetailsSheet() {
 
       <SheetContent side="right" className=" h-auto w-96 rounded-2xl ">
         <SheetHeader>
-          <SheetTitle
-            className="text-[18px] font-semibold"
-          >
+          <SheetTitle className="text-[18px] font-semibold">
             More details
           </SheetTitle>
         </SheetHeader>
 
         <div className="mt-6 overflow-y-auto">
-          
           <InfoSection
             icon="ant-design:phone-outlined"
             label="Phone"
@@ -35,5 +33,3 @@ export function UserDetailsSheet() {
     </Sheet>
   );
 }
-
-
